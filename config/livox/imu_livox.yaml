@@ -1,0 +1,11 @@
+imu_topic: /livox/imu
+
+## ImuStateEstimator
+imu_excite_threshold: 1.0
+
+imu_integration_constraint_ms: 0.02
+
+gravity_mag: 9.8
+
+
+

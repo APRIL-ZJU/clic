@@ -1,0 +1,35 @@
+## Mode
+## 1 : Odometry_Offline   |  2 : Odometry_Online
+mode: 1
+
+config_path: /home/ha/ros_ws/catkin_clic/src/clic/config
+
+imu_yaml: /livox/imu_livox.yaml
+lidar_odom_yaml: /livox/lidar_livox.yaml
+
+## Bag Param
+bag_path: /media/ha/Backup/dataset/r3live/hku_campus_seq_00.bag
+
+bag_start: 1
+bag_durr: -1
+
+opt_time_offset: false
+
+## Spline Param
+knot_distance: 0.03
+update_every_k_knot: 4
+
+# LIO = 0
+odometry_mode: 0
+
+## For Optimization
+# https://www.xsens.com/hubfs/Downloads/usermanual/MTi_usermanual.pdf
+imu_frequency: 100
+gyroscope_noise_density: 1.7453e-04         # [0.01 deg/s/sqrt(Hz)] -> 1.745e-4
+gyroscope_random_walk: 1.0000e-05           # [10   deg/h]          -> 2.424e-6
+accelerometer_noise_density: 5.8860e-03     # [60   ug/sqrt(Hz)]    -> 5.886e-4
+accelerometer_random_walk: 1.0000e-04       # [15   ug]             -> 7.350e-6
+
+global_velocity: 0.2        # global velocity to predict trajectory
+lidar_weight: 100.0          # 1/0.01 = 100
+

@@ -1,0 +1,41 @@
+%YAML:1.0
+
+#common parameters
+image_topic: /camera/image_raw
+# image_topic: /camera/image_raw/compressed
+
+#camera calibration 
+model_type: MEI
+camera_name: camera
+image_width: 720
+image_height: 540
+mirror_parameters:
+   xi: 1.9926618269451453
+distortion_parameters:
+   k1: -0.0399258932468764
+   k2: 0.15160828121223818
+   p1: 0.00017756967825777937
+   p2: -0.0011531239076798612
+projection_parameters:
+   gamma1: 669.8940458885896
+   gamma2: 669.1450614220616
+   u0: 377.9459252967363
+   v0: 279.63655686698144
+fisheye_mask_path: "/home/ha/ros_ws/catkin_clic/src/clic/config/lvi/fisheye_mask_720x540.jpg"
+
+focal_length: 460
+
+#feature traker paprameters
+max_cnt: 150            # max feature number in feature tracking
+min_dist: 20            # min distance between two features
+freq: 10                 # frequence (Hz) of publish tracking result. At least 10Hz for good estimation. If set 0, the frequence will be same as raw image
+F_threshold: 1.0        # ransac threshold (pixel)
+show_track: 1           # publish tracking image as topic
+equalize: 1             # if image is too dark or light, trun on equalize to find enough features
+fisheye: 1              # if using fisheye, trun on it. A circle mask will be loaded to remove edge noisy points
+
+flow_back: 1
+fb_threshold: 5.0 #0.5
+
+#optimization parameters
+keyframe_parallax: 50.0 # keyframe selection threshold (pixel)

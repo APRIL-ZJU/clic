@@ -1,0 +1,85 @@
+# horizontal
+lidar0:
+    topic: /os1_cloud_node1/points
+    is_livox: false
+    Extrinsics:
+        # Nguyen, et al. "Ntu viral: A visual-inertial-ranging-lidar dataset, from an aerial vehicle viewpoint."
+        # Section4.2 " the timestamp of each lidar point cloud message matches with the end-time of the scan"
+        time_offset: -0.100
+        # LiDAR in IMU
+        Trans: [-0.050, 0.0, 0.055]
+        Rot: [1, 0, 0,
+              0, 1, 0,
+              0, 0, 1]
+# vertical
+lidar1:
+    topic: /os1_cloud_node2/points
+    is_livox: false
+    Extrinsics:
+        time_offset: -0.100
+        # LiDAR2 in imu
+        Trans: [-0.550, 0.030, 0.050]
+        Rot: [-1.0, 0.0, 0.0,
+              0.0, 0.0, 1.0,
+              0.0, 1.0, 0.0]
+num_lidars: 1
+
+
+################### FeatureExtraction ###################
+VLP16:
+    N_SCAN: 16
+    Horizon_SCAN: 1024
+    edge_threshold: 1.0
+    surf_threshold: 0.1
+    odometry_surface_leaf_size: 0.4         # default: 0.4 - outdoor, 0.2 - indoor
+    min_distance: 1.0
+    max_distance: 200.0
+
+################### Odometry ###################
+use_corner_feature: false
+
+current_scan_param:
+    corner_leaf_size: 0.2        #降采样分辨率              # default: 0.2 - outdoor, 0.2 - indoor
+    surface_leaf_size: 0.4                                # default: 0.4 - outdoor, 0.4 - indoor 可以改爲0.4
+
+    edge_min_valid_num: 10       #特征点个数的最小阈值
+    surf_min_valid_num: 100
+
+    correspondence_downsample: 2 #数据关联每隔几个取一个
+
+#关键帧选取策略：角度、距离、时间
+keyframe_strategy:
+    angle_degree: 10
+    dist_meter: 1.0
+    time_second: 10
+
+#局部地图选取策略：距离范围、时间范围
+#局部地图选取后要降采样
+map_param:    
+    keyframe_search_radius: 50.0          # default: 30 - outdoor, 10 - indoor
+    keyframe_search_time: 10.0
+    keyframe_density: 2               # default: 2 - outdoor,  0.5 - indoor
+
+    cloud_reserved_time: 60. # seconds 
+
+
+################### LoopClosure ###################
+loop_closure_enable_flag: false
+loop_closure_frequency: 0.04
+
+use_full_cloud: true  # 使用full_cloud icp效果好
+icp_manual_check: true
+
+scan_search_radius: 10.0
+scan_search_num: 30
+scan_time_diff: 35.0
+scan_index_diff: 50
+
+scan_fitness_score: 5.0
+loop_closure_downsample_leaf_size: 0.4
+
+loop_closure_weights:
+    pose_graph_edge_pos_weight: 20.0
+    pose_graph_edge_rot_weight: 40.0
+    velocity_weight: 2.0
+    gyro_weight: 2.0

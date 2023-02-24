@@ -1,0 +1,38 @@
+%YAML:1.0
+
+#common parameters
+image_topic: /left/image_raw
+# image_topic: /camera/image_raw/compressed
+
+#camera calibration 
+model_type: PINHOLE
+camera_name: camera
+image_width: 752
+image_height: 480
+distortion_parameters:
+   k1: -0.300267420221178
+   k2:  0.090544063693053
+   p1:  3.330220891093334e-05
+   p2:  8.989607188457415e-05
+projection_parameters:
+   fx: 4.313364265799752e+02
+   fy: 4.327527965378035e+02
+   cx: 3.548956286992647e+02
+   cy: 2.325508916495161e+02
+
+focal_length: 460
+
+#feature traker paprameters
+max_cnt: 150            # max feature number in feature tracking
+min_dist: 30            # min distance between two features
+freq: 10                 # frequence (Hz) of publish tracking result. At least 10Hz for good estimation. If set 0, the frequence will be same as raw image
+F_threshold: 1.0        # ransac threshold (pixel)
+show_track: 1           # publish tracking image as topic
+equalize: 1             # if image is too dark or light, trun on equalize to find enough features
+fisheye: 0              # if using fisheye, trun on it. A circle mask will be loaded to remove edge noisy points
+
+flow_back: 1
+fb_threshold: 2.0 #0.5 #2.0 #5.0
+
+#optimization parameters
+keyframe_parallax: 50.0 # keyframe selection threshold (pixel)

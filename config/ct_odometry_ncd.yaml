@@ -1,0 +1,45 @@
+## Mode
+## 1 : Odometry_Offline   |  2 : Odometry_Online
+mode: 1
+
+config_path: /home/ha/ros_ws/catkin_clic/src/clic/config
+
+imu_yaml: /ncd/imu_ncd.yaml
+camera_yaml: /ncd/cam_ncd.yaml
+lidar_odom_yaml: /ncd/lidar_ncd.yaml
+
+## Bag Param
+bag_path: /media/ha/Dataset/ncd/06_dynamic_spinning/06_0.bag
+
+bag_start: 0.0
+bag_durr: -1
+
+opt_time_offset: false
+
+## Spline Param
+knot_distance: 0.03
+update_every_k_knot: 4
+
+# LIO = 0, LICO = 1
+odometry_mode: 0
+
+## For Optimization  https://www.xsens.com/hubfs/Downloads/usermanual/MTi_usermanual.pdf
+imu_frequency: 100
+gyroscope_noise_density: 2.0e-4         # [0.015 deg/s/sqrt(Hz)]    -> 2.617e-4
+gyroscope_random_walk: 4.0e-6           # [10   deg/h]              -> 2.424e-6
+accelerometer_noise_density: 1.2e-3     # [230  ug/sqrt(Hz)]        -> 2.254e-3
+accelerometer_random_walk: 1.0e-4       # [15   ug]                 -> 7.350e-6
+
+global_velocity: 50        # global velocity to predict trajectory  积分速度+预测速度 不可太大！！！
+lidar_weight: 50.0          # 1/0.01 = 100
+image_weight: 200.          # focal_length / pixel
+
+add_extra_timeoffset_s: 0.00
+
+CameraExtrinsics:
+    time_offset: -0.060
+    # Camera1 in IMU
+    Trans: [ 0.04249269, 0.06466842, -0.01845775]
+    Rot: [ 0.70992163 , 0.02460003 , 0.70385092,
+           -0.70414167,  0.00493623,  0.71004236,
+           0.01399269, -0.99968519,  0.02082624]

@@ -1,0 +1,987 @@
+Panels:
+  - Class: rviz/Displays
+    Help Height: 0
+    Name: Displays
+    Property Tree Widget:
+      Expanded:
+        - /Status1
+        - /clic1
+        - /clic1/lidar1
+        - /clic1/init_traj1/PointCloud21
+        - /clic1/imu_estimator_traj1/propogation1
+        - /clic1/TF1/Frames1
+      Splitter Ratio: 0.6012793183326721
+    Tree Height: 547
+  - Class: rviz/Selection
+    Name: Selection
+  - Class: rviz/Tool Properties
+    Expanded:
+      - /2D Pose Estimate1
+      - /2D Nav Goal1
+      - /Publish Point1
+    Name: Tool Properties
+    Splitter Ratio: 0.5886790156364441
+  - Class: rviz/Views
+    Expanded:
+      - /Current View1
+    Name: Views
+    Splitter Ratio: 0.5
+  - Class: rviz/Time
+    Experimental: false
+    Name: Time
+    SyncMode: 0
+    SyncSource: spline_ctrl_cloud
+Preferences:
+  PromptSaveOnExit: true
+Toolbars:
+  toolButtonStyle: 2
+Visualization Manager:
+  Class: ""
+  Displays:
+    - Class: rviz/Axes
+      Enabled: false
+      Length: 10
+      Name: Axes
+      Radius: 0.20000000298023224
+      Reference Frame: <Fixed Frame>
+      Value: false
+    - Alpha: 0.30000001192092896
+      Cell Size: 10
+      Class: rviz/Grid
+      Color: 160; 160; 164
+      Enabled: true
+      Line Style:
+        Line Width: 0.029999999329447746
+        Value: Lines
+      Name: Grid
+      Normal Cell Count: 0
+      Offset:
+        X: 0
+        Y: 0
+        Z: 0
+      Plane: XY
+      Plane Cell Count: 20
+      Reference Frame: <Fixed Frame>
+      Value: true
+    - Class: rviz/Group
+      Displays:
+        - Class: rviz/Group
+          Displays:
+            - Alpha: 0.5
+              Autocompute Intensity Bounds: true
+              Autocompute Value Bounds:
+                Max Value: 30.959457397460938
+                Min Value: 0
+                Value: false
+              Axis: Z
+              Channel Name: intensity
+              Class: rviz/PointCloud2
+              Color: 255; 255; 255
+              Color Transformer: Intensity
+              Decay Time: 0
+              Enabled: true
+              Invert Rainbow: false
+              Max Color: 64; 81; 191
+              Max Intensity: 1758
+              Min Color: 239; 41; 41
+              Min Intensity: 2
+              Name: map_cloud
+              Position Transformer: XYZ
+              Queue Size: 0
+              Selectable: true
+              Size (Pixels): 2
+              Size (m): 0.20000000298023224
+              Style: Points
+              Topic: /lio/target_dense_cloud
+              Unreliable: false
+              Use Fixed Frame: true
+              Use rainbow: true
+              Value: true
+            - Alpha: 0.20000000298023224
+              Autocompute Intensity Bounds: true
+              Autocompute Value Bounds:
+                Max Value: 10
+                Min Value: -10
+                Value: true
+              Axis: Z
+              Channel Name: intensity
+              Class: rviz/PointCloud2
+              Color: 255; 255; 255
+              Color Transformer: Intensity
+              Decay Time: 600
+              Enabled: true
+              Invert Rainbow: false
+              Max Color: 255; 255; 255
+              Max Intensity: 1531
+              Min Color: 0; 0; 0
+              Min Intensity: 2
+              Name: cur_sum
+              Position Transformer: XYZ
+              Queue Size: 100000
+              Selectable: true
+              Size (Pixels): 1
+              Size (m): 0.009999999776482582
+              Style: Points
+              Topic: /lio/source_dense_cloud
+              Unreliable: false
+              Use Fixed Frame: true
+              Use rainbow: true
+              Value: true
+            - Alpha: 1
+              Autocompute Intensity Bounds: true
+              Autocompute Value Bounds:
+                Max Value: 18.608661651611328
+                Min Value: -5.105392932891846
+                Value: true
+              Axis: Z
+              Channel Name: intensity
+              Class: rviz/PointCloud2
+              Color: 255; 255; 255
+              Color Transformer: FlatColor
+              Decay Time: 0
+              Enabled: true
+              Invert Rainbow: false
+              Max Color: 255; 255; 255
+              Max Intensity: 100
+              Min Color: 0; 0; 0
+              Min Intensity: 0
+              Name: cur_cloud
+              Position Transformer: XYZ
+              Queue Size: 10
+              Selectable: true
+              Size (Pixels): 2
+              Size (m): 0.009999999776482582
+              Style: Points
+              Topic: /lio/source_dense_cloud
+              Unreliable: false
+              Use Fixed Frame: true
+              Use rainbow: true
+              Value: true
+            - Alpha: 0.5
+              Autocompute Intensity Bounds: false
+              Autocompute Value Bounds:
+                Max Value: 10
+                Min Value: -10
+                Value: true
+              Axis: Z
+              Channel Name: intensity
+              Class: rviz/PointCloud2
+              Color: 138; 226; 52
+              Color Transformer: Intensity
+              Decay Time: 0
+              Enabled: false
+              Invert Rainbow: false
+              Max Color: 238; 238; 236
+              Max Intensity: 100
+              Min Color: 245; 121; 0
+              Min Intensity: 50
+              Name: loam_source
+              Position Transformer: XYZ
+              Queue Size: 10
+              Selectable: true
+              Size (Pixels): 10
+              Size (m): 0.009999999776482582
+              Style: Points
+              Topic: /lio/source_fea
+              Unreliable: false
+              Use Fixed Frame: true
+              Use rainbow: false
+              Value: false
+            - Alpha: 1
+              Autocompute Intensity Bounds: true
+              Autocompute Value Bounds:
+                Max Value: 10
+                Min Value: -10
+                Value: true
+              Axis: Z
+              Channel Name: intensity
+              Class: rviz/PointCloud2
+              Color: 255; 255; 255
+              Color Transformer: Intensity
+              Decay Time: 0
+              Enabled: false
+              Invert Rainbow: false
+              Max Color: 255; 255; 255
+              Max Intensity: 6.8253068923950195
+              Min Color: 0; 0; 0
+              Min Intensity: -34.74357986450195
+              Name: map_corr_temp
+              Position Transformer: XYZ
+              Queue Size: 10
+              Selectable: true
+              Size (Pixels): 5
+              Size (m): 0.009999999776482582
+              Style: Points
+              Topic: /lio/map_corr_temp
+              Unreliable: false
+              Use Fixed Frame: true
+              Use rainbow: true
+              Value: false
+            - Alpha: 1
+              Autocompute Intensity Bounds: false
+              Autocompute Value Bounds:
+                Max Value: 12.62048625946045
+                Min Value: -2.5958046913146973
+                Value: true
+              Axis: Z
+              Channel Name: intensity
+              Class: rviz/PointCloud2
+              Color: 239; 41; 41
+              Color Transformer: Intensity
+              Decay Time: 0
+              Enabled: false
+              Invert Rainbow: false
+              Max Color: 255; 255; 255
+              Max Intensity: 100
+              Min Color: 252; 175; 62
+              Min Intensity: 50
+              Name: loam_target
+              Position Transformer: XYZ
+              Queue Size: 10
+              Selectable: true
+              Size (Pixels): 5
+              Size (m): 0.009999999776482582
+              Style: Points
+              Topic: /lio/target_fea
+              Unreliable: false
+              Use Fixed Frame: true
+              Use rainbow: false
+              Value: false
+          Enabled: true
+          Name: lidar
+        - Class: rviz/Group
+          Displays:
+            - Class: rviz/Image
+              Enabled: true
+              Image Topic: /feature_img
+              Max Value: 1
+              Median window: 5
+              Min Value: 0
+              Name: image_feature_tracker
+              Normalize Range: true
+              Queue Size: 2
+              Transport Hint: raw
+              Unreliable: false
+              Value: true
+            - Alpha: 0.5
+              Autocompute Intensity Bounds: true
+              Autocompute Value Bounds:
+                Max Value: 10
+                Min Value: -10
+                Value: true
+              Axis: Z
+              Channel Name: intensity
+              Class: rviz/PointCloud2
+              Color: 255; 255; 255
+              Color Transformer: Intensity
+              Decay Time: 0
+              Enabled: true
+              Invert Rainbow: false
+              Max Color: 114; 159; 207
+              Max Intensity: 23
+              Min Color: 0; 255; 0
+              Min Intensity: 0
+              Name: vio_landmark
+              Position Transformer: XYZ
+              Queue Size: 10
+              Selectable: true
+              Size (Pixels): 4
+              Size (m): 1
+              Style: Squares
+              Topic: /vio/landmarks
+              Unreliable: false
+              Use Fixed Frame: true
+              Use rainbow: true
+              Value: true
+            - Alpha: 0.30000001192092896
+              Autocompute Intensity Bounds: true
+              Autocompute Value Bounds:
+                Max Value: 164.84866333007812
+                Min Value: 164.83753967285156
+                Value: true
+              Axis: X
+              Channel Name: intensity
+              Class: rviz/PointCloud2
+              Color: 239; 41; 41
+              Color Transformer: FlatColor
+              Decay Time: 1
+              Enabled: true
+              Invert Rainbow: false
+              Max Color: 255; 255; 255
+              Max Intensity: 200
+              Min Color: 0; 0; 0
+              Min Intensity: 200
+              Name: vio_keyframe
+              Position Transformer: XYZ
+              Queue Size: 10
+              Selectable: true
+              Size (Pixels): 3
+              Size (m): 0.5
+              Style: Squares
+              Topic: /vio/keyframe
+              Unreliable: false
+              Use Fixed Frame: true
+              Use rainbow: true
+              Value: true
+            - Alpha: 1
+              Autocompute Intensity Bounds: true
+              Autocompute Value Bounds:
+                Max Value: 10
+                Min Value: -10
+                Value: true
+              Axis: Z
+              Channel Name: intensity
+              Class: rviz/PointCloud2
+              Color: 255; 255; 255
+              Color Transformer: Intensity
+              Decay Time: 0
+              Enabled: true
+              Invert Rainbow: false
+              Max Color: 255; 255; 255
+              Max Intensity: 23
+              Min Color: 0; 0; 0
+              Min Intensity: 0
+              Name: marg_cloud
+              Position Transformer: XYZ
+              Queue Size: 10
+              Selectable: true
+              Size (Pixels): 10
+              Size (m): 0.5
+              Style: Points
+              Topic: /vio/marg_cloud
+              Unreliable: false
+              Use Fixed Frame: true
+              Use rainbow: true
+              Value: true
+            - Alpha: 1
+              Autocompute Intensity Bounds: true
+              Autocompute Value Bounds:
+                Max Value: 10
+                Min Value: -10
+                Value: true
+              Axis: Z
+              Channel Name: intensity
+              Class: rviz/PointCloud2
+              Color: 255; 255; 255
+              Color Transformer: Intensity
+              Decay Time: 0
+              Enabled: false
+              Invert Rainbow: false
+              Max Color: 255; 255; 255
+              Max Intensity: 4096
+              Min Color: 0; 0; 0
+              Min Intensity: 0
+              Name: depth_cloud
+              Position Transformer: XYZ
+              Queue Size: 10
+              Selectable: true
+              Size (Pixels): 3
+              Size (m): 0.009999999776482582
+              Style: Points
+              Topic: /depth_cloud
+              Unreliable: false
+              Use Fixed Frame: true
+              Use rainbow: true
+              Value: false
+            - Alpha: 1
+              Autocompute Intensity Bounds: true
+              Autocompute Value Bounds:
+                Max Value: 10
+                Min Value: -10
+                Value: true
+              Axis: Z
+              Channel Name: intensity
+              Class: rviz/PointCloud
+              Color: 239; 41; 41
+              Color Transformer: FlatColor
+              Decay Time: 0
+              Enabled: false
+              Invert Rainbow: false
+              Max Color: 239; 41; 41
+              Max Intensity: 4096
+              Min Color: 0; 0; 0
+              Min Intensity: 0
+              Name: vio_initial_landmarks
+              Position Transformer: XYZ
+              Queue Size: 10
+              Selectable: true
+              Size (Pixels): 5
+              Size (m): 0.009999999776482582
+              Style: Points
+              Topic: /vio_initial_landmarks
+              Unreliable: false
+              Use Fixed Frame: true
+              Use rainbow: true
+              Value: false
+          Enabled: true
+          Name: vio
+        - Class: rviz/Group
+          Displays:
+            - Alpha: 0.10000000149011612
+              Buffer Length: 1
+              Class: rviz/Path
+              Color: 85; 255; 255
+              Enabled: true
+              Head Diameter: 0.30000001192092896
+              Head Length: 0.20000000298023224
+              Length: 0.05000000074505806
+              Line Style: Lines
+              Line Width: 0.029999999329447746
+              Name: Path
+              Offset:
+                X: 0
+                Y: 0
+                Z: 0
+              Pose Color: 255; 85; 255
+              Pose Style: Axes
+              Radius: 0.0010000000474974513
+              Shaft Diameter: 0.10000000149011612
+              Shaft Length: 0.10000000149011612
+              Topic: /spline/init_ctrl_path
+              Unreliable: false
+              Value: true
+            - Alpha: 1
+              Autocompute Intensity Bounds: false
+              Autocompute Value Bounds:
+                Max Value: 10
+                Min Value: -10
+                Value: true
+              Axis: Z
+              Channel Name: intensity
+              Class: rviz/PointCloud2
+              Color: 255; 255; 255
+              Color Transformer: Intensity
+              Decay Time: 2
+              Enabled: true
+              Invert Rainbow: false
+              Max Color: 255; 255; 255
+              Max Intensity: 200
+              Min Color: 0; 0; 0
+              Min Intensity: 100
+              Name: PointCloud2
+              Position Transformer: XYZ
+              Queue Size: 10
+              Selectable: true
+              Size (Pixels): 15
+              Size (m): 0.009999999776482582
+              Style: Points
+              Topic: /spline/init_ctrl_cloud
+              Unreliable: false
+              Use Fixed Frame: true
+              Use rainbow: true
+              Value: true
+          Enabled: false
+          Name: init_traj
+        - Class: rviz/Group
+          Displays:
+            - Alpha: 0.4000000059604645
+              Autocompute Intensity Bounds: true
+              Autocompute Value Bounds:
+                Max Value: 10
+                Min Value: -10
+                Value: true
+              Axis: Z
+              Channel Name: intensity
+              Class: rviz/PointCloud2
+              Color: 138; 226; 52
+              Color Transformer: FlatColor
+              Decay Time: 0
+              Enabled: false
+              Invert Rainbow: false
+              Max Color: 255; 255; 255
+              Max Intensity: 100
+              Min Color: 0; 0; 0
+              Min Intensity: 100
+              Name: active_ctrl_cloud
+              Position Transformer: XYZ
+              Queue Size: 10
+              Selectable: true
+              Size (Pixels): 20
+              Size (m): 0.009999999776482582
+              Style: Points
+              Topic: /spline/active_ctrl_cloud
+              Unreliable: false
+              Use Fixed Frame: true
+              Use rainbow: true
+              Value: false
+            - Alpha: 1
+              Autocompute Intensity Bounds: true
+              Autocompute Value Bounds:
+                Max Value: 10
+                Min Value: -10
+                Value: true
+              Axis: Z
+              Channel Name: intensity
+              Class: rviz/PointCloud2
+              Color: 255; 255; 255
+              Color Transformer: Intensity
+              Decay Time: 0
+              Enabled: false
+              Invert Rainbow: false
+              Max Color: 255; 255; 255
+              Max Intensity: 250
+              Min Color: 0; 0; 0
+              Min Intensity: 10
+              Name: spline_bias
+              Position Transformer: XYZ
+              Queue Size: 10
+              Selectable: true
+              Size (Pixels): 15
+              Size (m): 0.009999999776482582
+              Style: Points
+              Topic: /spline/bias
+              Unreliable: false
+              Use Fixed Frame: true
+              Use rainbow: true
+              Value: false
+            - Alpha: 1
+              Buffer Length: 1
+              Class: rviz/Path
+              Color: 85; 255; 255
+              Enabled: false
+              Head Diameter: 0.30000001192092896
+              Head Length: 0.20000000298023224
+              Length: 0.05000000074505806
+              Line Style: Billboards
+              Line Width: 0.05000000074505806
+              Name: spline_path
+              Offset:
+                X: 0
+                Y: 0
+                Z: 0
+              Pose Color: 255; 85; 255
+              Pose Style: Axes
+              Radius: 0.009999999776482582
+              Shaft Diameter: 0.10000000149011612
+              Shaft Length: 0.10000000149011612
+              Topic: /spline/trajectory
+              Unreliable: false
+              Value: false
+            - Alpha: 1
+              Autocompute Intensity Bounds: true
+              Autocompute Value Bounds:
+                Max Value: 10
+                Min Value: -10
+                Value: true
+              Axis: Z
+              Channel Name: intensity
+              Class: rviz/PointCloud2
+              Color: 85; 255; 255
+              Color Transformer: FlatColor
+              Decay Time: 0
+              Enabled: true
+              Invert Rainbow: false
+              Max Color: 255; 255; 255
+              Max Intensity: 100
+              Min Color: 0; 0; 0
+              Min Intensity: 100
+              Name: spline_ctrl_cloud
+              Position Transformer: XYZ
+              Queue Size: 10
+              Selectable: true
+              Size (Pixels): 3
+              Size (m): 0.009999999776482582
+              Style: Points
+              Topic: /spline/ctrl_cloud
+              Unreliable: false
+              Use Fixed Frame: true
+              Use rainbow: true
+              Value: true
+            - Alpha: 1
+              Buffer Length: 1
+              Class: rviz/Path
+              Color: 25; 255; 0
+              Enabled: false
+              Head Diameter: 0.30000001192092896
+              Head Length: 0.20000000298023224
+              Length: 0.019999999552965164
+              Line Style: Lines
+              Line Width: 0.019999999552965164
+              Name: spline_ctrl
+              Offset:
+                X: 0
+                Y: 0
+                Z: 0
+              Pose Color: 255; 85; 255
+              Pose Style: None
+              Radius: 0.004999999888241291
+              Shaft Diameter: 0.10000000149011612
+              Shaft Length: 0.10000000149011612
+              Topic: /spline/ctrl_path
+              Unreliable: false
+              Value: false
+            - Alpha: 0.5
+              Autocompute Intensity Bounds: true
+              Autocompute Value Bounds:
+                Max Value: 10
+                Min Value: -10
+                Value: true
+              Axis: Z
+              Channel Name: intensity
+              Class: rviz/PointCloud2
+              Color: 85; 255; 255
+              Color Transformer: FlatColor
+              Decay Time: 60
+              Enabled: false
+              Invert Rainbow: false
+              Max Color: 255; 255; 255
+              Max Intensity: 0
+              Min Color: 0; 0; 0
+              Min Intensity: 0
+              Name: marg_ctrl_cloud
+              Position Transformer: XYZ
+              Queue Size: 10
+              Selectable: true
+              Size (Pixels): 20
+              Size (m): 0.019999999552965164
+              Style: Squares
+              Topic: /spline/marg_ctrl_cloud
+              Unreliable: false
+              Use Fixed Frame: true
+              Use rainbow: true
+              Value: false
+          Enabled: true
+          Name: spline
+        - Class: rviz/Group
+          Displays:
+            - Alpha: 0.10000000149011612
+              Buffer Length: 1
+              Class: rviz/Path
+              Color: 239; 41; 41
+              Enabled: true
+              Head Diameter: 0.30000001192092896
+              Head Length: 0.20000000298023224
+              Length: 0.10000000149011612
+              Line Style: Lines
+              Line Width: 0.029999999329447746
+              Name: propogation
+              Offset:
+                X: 0
+                Y: 0
+                Z: 0.5
+              Pose Color: 255; 85; 255
+              Pose Style: Axes
+              Radius: 0.019999999552965164
+              Shaft Diameter: 0.10000000149011612
+              Shaft Length: 0.10000000149011612
+              Topic: /imu/propogation_trajectory
+              Unreliable: false
+              Value: true
+            - Alpha: 1
+              Buffer Length: 1
+              Class: rviz/Path
+              Color: 239; 41; 41
+              Enabled: true
+              Head Diameter: 0.30000001192092896
+              Head Length: 0.20000000298023224
+              Length: 2
+              Line Style: Lines
+              Line Width: 0.029999999329447746
+              Name: prediction
+              Offset:
+                X: 0
+                Y: 0
+                Z: 0
+              Pose Color: 255; 85; 255
+              Pose Style: Axes
+              Radius: 0.20000000298023224
+              Shaft Diameter: 0.10000000149011612
+              Shaft Length: 0.10000000149011612
+              Topic: /imu/prediction_trajectory
+              Unreliable: false
+              Value: true
+          Enabled: false
+          Name: imu_estimator_traj
+        - Class: rviz/Image
+          Enabled: false
+          Image Topic: /vio/track_image
+          Max Value: 1
+          Median window: 5
+          Min Value: 0
+          Name: Image
+          Normalize Range: true
+          Queue Size: 2
+          Transport Hint: raw
+          Unreliable: false
+          Value: false
+        - Class: rviz/TF
+          Enabled: true
+          Frame Timeout: 10000
+          Frames:
+            All Enabled: false
+            global:
+              Value: true
+            lidar:
+              Value: true
+            map:
+              Value: true
+          Marker Scale: 10
+          Name: TF
+          Show Arrows: false
+          Show Axes: true
+          Show Names: true
+          Tree:
+            global:
+              map:
+                lidar:
+                  {}
+          Update Interval: 0
+          Value: true
+      Enabled: true
+      Name: clic
+    - Class: rviz/Group
+      Displays:
+        - Class: rviz/MarkerArray
+          Enabled: true
+          Marker Topic: /loop/clousre_markers
+          Name: clousre_markers
+          Namespaces:
+            {}
+          Queue Size: 100
+          Value: true
+        - Alpha: 1
+          Autocompute Intensity Bounds: true
+          Autocompute Value Bounds:
+            Max Value: 10
+            Min Value: -10
+            Value: true
+          Axis: Z
+          Channel Name: intensity
+          Class: rviz/PointCloud2
+          Color: 221; 41; 200
+          Color Transformer: FlatColor
+          Decay Time: 0
+          Enabled: true
+          Invert Rainbow: false
+          Max Color: 255; 255; 255
+          Max Intensity: 1176.9090576171875
+          Min Color: 0; 0; 0
+          Min Intensity: 0
+          Name: icp_guess_source(purple)
+          Position Transformer: XYZ
+          Queue Size: 10
+          Selectable: true
+          Size (Pixels): 2
+          Size (m): 0.009999999776482582
+          Style: Points
+          Topic: /loop/icp_guess_source_cloud
+          Unreliable: false
+          Use Fixed Frame: true
+          Use rainbow: true
+          Value: true
+        - Alpha: 0.800000011920929
+          Autocompute Intensity Bounds: true
+          Autocompute Value Bounds:
+            Max Value: 10
+            Min Value: -10
+            Value: true
+          Axis: Z
+          Channel Name: intensity
+          Class: rviz/PointCloud2
+          Color: 25; 255; 0
+          Color Transformer: FlatColor
+          Decay Time: 0
+          Enabled: true
+          Invert Rainbow: false
+          Max Color: 255; 255; 255
+          Max Intensity: 2983
+          Min Color: 0; 0; 0
+          Min Intensity: 0
+          Name: icp_source(green)
+          Position Transformer: XYZ
+          Queue Size: 10
+          Selectable: true
+          Size (Pixels): 2
+          Size (m): 0.009999999776482582
+          Style: Points
+          Topic: /loop/icp_source_cloud
+          Unreliable: false
+          Use Fixed Frame: true
+          Use rainbow: true
+          Value: true
+        - Alpha: 0.800000011920929
+          Autocompute Intensity Bounds: true
+          Autocompute Value Bounds:
+            Max Value: 10
+            Min Value: -10
+            Value: true
+          Axis: Z
+          Channel Name: intensity
+          Class: rviz/PointCloud2
+          Color: 255; 255; 255
+          Color Transformer: FlatColor
+          Decay Time: 0
+          Enabled: true
+          Invert Rainbow: false
+          Max Color: 255; 255; 255
+          Max Intensity: 2027
+          Min Color: 0; 0; 0
+          Min Intensity: 0
+          Name: icp_target(white)
+          Position Transformer: XYZ
+          Queue Size: 10
+          Selectable: true
+          Size (Pixels): 2
+          Size (m): 0.009999999776482582
+          Style: Points
+          Topic: /loop/icp_target_cloud
+          Unreliable: false
+          Use Fixed Frame: true
+          Use rainbow: true
+          Value: true
+        - Class: rviz/MarkerArray
+          Enabled: true
+          Marker Topic: /loop/pose_graph_markers
+          Name: pose_graph_markers
+          Namespaces:
+            {}
+          Queue Size: 100
+          Value: true
+        - Alpha: 0.5
+          Autocompute Intensity Bounds: false
+          Autocompute Value Bounds:
+            Max Value: 10
+            Min Value: -10
+            Value: true
+          Axis: Z
+          Channel Name: intensity
+          Class: rviz/PointCloud2
+          Color: 255; 255; 255
+          Color Transformer: Intensity
+          Decay Time: 0
+          Enabled: true
+          Invert Rainbow: false
+          Max Color: 237; 212; 0
+          Max Intensity: 200
+          Min Color: 221; 41; 200
+          Min Intensity: 100
+          Name: loop_ctrl_cloud
+          Position Transformer: XYZ
+          Queue Size: 10
+          Selectable: true
+          Size (Pixels): 3
+          Size (m): 0.05000000074505806
+          Style: Squares
+          Topic: /spline/loop_ctrl_cloud
+          Unreliable: false
+          Use Fixed Frame: true
+          Use rainbow: false
+          Value: true
+        - Alpha: 1
+          Buffer Length: 1
+          Class: rviz/Path
+          Color: 238; 238; 236
+          Enabled: true
+          Head Diameter: 0.30000001192092896
+          Head Length: 0.20000000298023224
+          Length: 0.30000001192092896
+          Line Style: Lines
+          Line Width: 0.019999999552965164
+          Name: loop_ctrl_path
+          Offset:
+            X: 0
+            Y: 0
+            Z: 0
+          Pose Color: 255; 85; 255
+          Pose Style: None
+          Radius: 0.029999999329447746
+          Shaft Diameter: 0.10000000149011612
+          Shaft Length: 0.10000000149011612
+          Topic: /spline/loop_ctrl_path
+          Unreliable: false
+          Value: true
+      Enabled: true
+      Name: loop
+    - Alpha: 0.30000001192092896
+      Buffer Length: 1
+      Class: rviz/Path
+      Color: 239; 41; 41
+      Enabled: false
+      Head Diameter: 0.30000001192092896
+      Head Length: 0.20000000298023224
+      Length: 0.30000001192092896
+      Line Style: Lines
+      Line Width: 0.029999999329447746
+      Name: gt
+      Offset:
+        X: 0
+        Y: 0
+        Z: 0
+      Pose Color: 255; 85; 255
+      Pose Style: None
+      Radius: 0.029999999329447746
+      Shaft Diameter: 0.10000000149011612
+      Shaft Length: 0.10000000149011612
+      Topic: /gt_pose
+      Unreliable: false
+      Value: false
+  Enabled: true
+  Global Options:
+    Background Color: 48; 48; 48
+    Default Light: true
+    Fixed Frame: map
+    Frame Rate: 30
+  Name: root
+  Tools:
+    - Class: rviz/Interact
+      Hide Inactive Objects: true
+    - Class: rviz/MoveCamera
+    - Class: rviz/Select
+    - Class: rviz/FocusCamera
+    - Class: rviz/Measure
+    - Class: rviz/SetInitialPose
+      Theta std deviation: 0.2617993950843811
+      Topic: /initialpose
+      X std deviation: 0.5
+      Y std deviation: 0.5
+    - Class: rviz/SetGoal
+      Topic: /move_base_simple/goal
+    - Class: rviz/PublishPoint
+      Single click: true
+      Topic: /clicked_point
+  Value: true
+  Views:
+    Current:
+      Class: rviz/XYOrbit
+      Distance: 125.09523010253906
+      Enable Stereo Rendering:
+        Stereo Eye Separation: 0.05999999865889549
+        Stereo Focal Distance: 1
+        Swap Stereo Eyes: false
+        Value: false
+      Focal Point:
+        X: -16.10443115234375
+        Y: -6.124903678894043
+        Z: -0.00036770402221009135
+      Focal Shape Fixed Size: false
+      Focal Shape Size: 0.05000000074505806
+      Invert Z Axis: false
+      Name: Current View
+      Near Clip Distance: 0.009999999776482582
+      Pitch: 1.5697963237762451
+      Target Frame: map
+      Value: XYOrbit (rviz)
+      Yaw: 3.1189262866973877
+    Saved: ~
+Window Geometry:
+  Displays:
+    collapsed: false
+  Height: 935
+  Hide Left Dock: false
+  Hide Right Dock: true
+  Image:
+    collapsed: false
+  QMainWindow State: 000000ff00000000fd00000004000000000000019e00000374fc0200000013fb0000001200530065006c0065006300740069006f006e00000001e10000009b0000005c00fffffffb0000001e0054006f006f006c002000500072006f007000650072007400690065007302000001ed000001df00000185000000a3fb000000120056006900650077007300200054006f006f02000001df000002110000018500000122fb000000200054006f006f006c002000500072006f0070006500720074006900650073003203000002880000011d000002210000017afb000000100044006900730070006c006100790073010000001600000260000000c900fffffffb0000002a0069006d006100670065005f0066006500610074007500720065005f0074007200610063006b00650072010000027c0000010e0000001600fffffffb0000002000730065006c0065006300740069006f006e00200062007500660066006500720200000138000000aa0000023a00000294fb00000014005700690064006500530074006500720065006f02000000e6000000d2000003ee0000030bfb0000000c004b0069006e0065006300740200000186000001060000030c00000261fb0000001c00430075007200720065006e0074002000440065007000740068007301000003a5000000160000000000000000fb0000001a0074007200610063006b0065006400200069006d0061006700650100000389000000160000000000000000fb00000012007200610077005f0069006d0061006700650000000000ffffffff0000000000000000fb00000020006c006f006f0070005f006d0061007400630068005f0069006d00610067006501000003a5000000160000000000000000fb00000014004c006f006f007000200069006d0061006700650000000000ffffffff0000000000000000fb0000001a0049006d00610067006500200046006500610074007500720065010000038a000000160000000000000000fb000000160049006d0061006700650020004400650070007400680000000000ffffffff0000000000000000fb0000000a0049006d00610067006500000002e50000011a0000001600fffffffb0000000a0049006d0061006700650000000174000001f90000000000000000fb0000002a0069006d006100670065005f0066006500610074007500720065005f0074007200610063006b006500720100000287000001780000000000000000000000010000010f000003e9fc0200000003fb0000001e0054006f006f006c002000500072006f00700065007200740069006500730100000041000000780000000000000000fb0000000a005600690065007700730000000016000003e9000000a400fffffffb0000001200530065006c0065006300740069006f006e010000025a000000b200000000000000000000000200000490000000a9fc0100000001fb0000000a00560069006500770073030000004e00000080000002e100000197000000030000078000000160fc0100000003fb0000000a0049006d00610067006501000003b0000003d00000000000000000fb0000000800540069006d0065000000000000000532000002eb00fffffffb0000000800540069006d00650100000000000004500000000000000000000005110000037400000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730000000000ffffffff0000000000000000
+  Selection:
+    collapsed: false
+  Time:
+    collapsed: false
+  Tool Properties:
+    collapsed: false
+  Views:
+    collapsed: true
+  Width: 1717
+  X: 0
+  Y: 0
+  image_feature_tracker:
+    collapsed: false

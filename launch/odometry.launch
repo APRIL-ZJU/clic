@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<launch>
+  <arg name="config_path"       default = "/config/ct_odometry_lvi.yaml" />
+  <arg name="bag_path"          default = "" />  
+  <arg name="pasue_time"        default = "-1" />
+  <arg name="verbose"           default = "false" />  
+  
+
+  <!-- <node pkg="clic" type="odometry_node" name="$(anon odometry_node)" output="screen" clear_params="true" 
+        launch-prefix="gdb -ex run &#45;&#45;args"> -->
+  <node pkg="clic" type="odometry_node" name="$(anon odometry_node)" output="screen">
+    <param name="config_path"     type="string" value="$(find clic)$(arg config_path)" />
+    
+    <!-- if 'bag_path' is none here then use get the 'bag_path' params in the yaml file-->
+    <param name="bag_path"        type="string" value="$(arg bag_path)" />
+    <param name="pasue_time"      type="double" value="$(arg pasue_time)" />
+    <param name="verbose"         type="bool"   value="$(arg verbose)" />
+  </node>
+
+  <!-- Image conversion -->
+  <!-- <node pkg="image_transport" type="republish" name="clic_republish"
+       args="compressed in:=/camera/image_raw raw out:=/camera/image_raw" output="screen" respawn="true"/> -->
+
+  <!-- start plotjuggler (-\-layout)-->
+  <!-- <node pkg="plotjuggler" type="plotjuggler" name="my_plot_Juggler" args= "-layout $(find clic)/config/rviz/plotjuggler_bias.xml" /> -->
+
+  <node pkg="rviz" type="rviz" name="rviz_odom" output="log" required = "true" args="-d $(find clic)/launch/clic.rviz" />
+</launch>

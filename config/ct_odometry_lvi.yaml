@@ -1,0 +1,45 @@
+## Mode
+## 1 : Odometry_Offline   |  2 : Odometry_Online
+mode: 1
+
+config_path: /home/ha/ros_ws/catkin_clic/src/clic/config
+
+imu_yaml: /lvi/imu_lvi.yaml
+camera_yaml: /lvi/cam_lvi.yaml
+lidar_odom_yaml: /lvi/lidar_lvi.yaml
+
+## Bag Param
+bag_path: /media/ha/Dataset/lvi/handheld_raw.bag
+
+bag_start: 0.
+bag_durr: -1
+
+opt_time_offset: false
+
+## Spline Param
+knot_distance: 0.03
+update_every_k_knot: 4
+
+# LIO = 0, LICO = 1
+odometry_mode: 1
+
+## For Optimization
+imu_frequency: 500
+gyroscope_noise_density: 1.0e-3         # [0.01 deg/s/sqrt(Hz)] -> 1.745e-4
+gyroscope_random_walk: 2.0e-6           # [10   deg/h]          -> 2.424e-6
+accelerometer_noise_density: 8.0e-3     # [60   ug/sqrt(Hz)]    -> 5.886e-4
+accelerometer_random_walk: 5.0e-5        # [15   ug]             -> 7.350e-6
+
+global_velocity: 50        # global velocity to predict trajectory 
+lidar_weight: 100.0          # 1/0.01 = 100
+image_weight: 450.0         # focal_length / pixel
+
+add_extra_timeoffset_s: 0
+
+CameraExtrinsics:
+    time_offset: 0.000
+    # Camera in IMU
+    Trans: [-0.0064, 0.0199, -0.0336]
+    Rot: [ 0, 0, 1,
+           -1, 0, 0,
+           0, -1, 0]

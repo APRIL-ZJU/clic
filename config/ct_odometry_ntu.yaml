@@ -1,0 +1,45 @@
+## Mode
+## 1 : Odometry_Offline   |  2 : Odometry_Online
+mode: 1
+
+config_path: /home/ha/ros_ws/catkin_clic/src/clic/config
+
+imu_yaml: /ntu/imu_ntu.yaml
+camera_yaml: /ntu/cam_ntu.yaml
+lidar_odom_yaml: /ntu/lidar_ntu.yaml
+
+## Bag Param
+bag_path: /media/ha/Dataset/NTU_VIRAL_DATASET/eee_01.bag
+
+bag_start: 0.
+bag_durr: -1
+
+opt_time_offset: false
+
+## Spline Param
+knot_distance: 0.03
+update_every_k_knot: 4
+
+# LIO = 0, LICO = 1
+odometry_mode: 0
+
+## For Optimization https://www.vectornav.com/products/detail/vn-100
+imu_frequency: 385
+gyroscope_noise_density: 6.1e-5                 # [0.0035  deg/s/sqrt(Hz)] -> 6.108e-4
+gyroscope_random_walk: 3.4e-6                   # [7       deg/h]          -> 3.393e-5
+accelerometer_noise_density: 1.4e-3             # [140     ug/sqrt(Hz)]    -> 1.372e-3
+accelerometer_random_walk: 3.9e-4               # [40      ug]             -> 3.920e-4
+
+global_velocity: 50                             # global velocity to predict trajectory  积分速度+预测速度
+lidar_weight: 50.0                              # 1/0.01 = 100
+image_weight: 200.0                             # focal_length / pixel
+
+add_extra_timeoffset_s: 0
+
+CameraExtrinsics:
+    time_offset: 0.000
+    # Camera in IMU
+    Trans: [0.00552943, -0.12431302, 0.01614686]
+    Rot: [ 0.02183084, -0.01312053,  0.99967558,
+           0.99975965,  0.00230088, -0.02180248,
+           -0.00201407,  0.99991127,  0.01316761]
