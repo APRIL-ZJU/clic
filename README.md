@@ -58,7 +58,7 @@ source devel/setup.bash
 
 ### Credits
 
-This code was developed by the [APRIL Lab](https://april.zju.edu.cn/) in Zhejiang University.
+This code was developed by Jiajun Lv and Xiaolei Lang from [APRIL Lab](https://april.zju.edu.cn/) in Zhejiang University.
 
 For researchers that have leveraged or compared to this work, please cite the following:
 
