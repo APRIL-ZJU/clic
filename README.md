@@ -8,6 +8,8 @@ CLIC is a tightly-coupled multi-modal SLAM algorithms based on continuous-time f
 
 Factor graphs of multi-sensor fusion. For more details, please refer to the [paper](https://github.com/APRIL-ZJU/clic/doc). [[arxiv](https://arxiv.org/pdf/2302.07456)]
 
+🎈 **[News]**  We release [Coco-LIC](https://github.com/APRIL-ZJU/Coco-LIC), which adopts non-uniform B-splines to tightly fuse LIC data.
+
 ### Prerequisites
 
 - [ROS](http://wiki.ros.org/ROS/Installation) (tested with Melodic)
